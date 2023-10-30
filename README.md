@@ -14,12 +14,24 @@ Clone the repo
 ```copy
 git clone https://github.com/DAOmasons/GrantShipsRulebook.git
 
-cd /GrantShipsRulebook
-
 ```
-Run `pnpm i` to install the dependencies.
+Change directory to `GrantShipsRulebook`
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+Run
+
+```copy
+pnpm i
+``` 
+
+to install the dependencies.
+
+Then, run 
+
+```copy
+pnpm dev
+```
+
+ to start the development server and visit localhost:3000.
 
 ## License
 
