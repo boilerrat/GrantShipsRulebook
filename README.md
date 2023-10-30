@@ -7,15 +7,6 @@
 
 There are some rules in place regarding making changes to the rulebook. All PRs must be approved by the account owners and they must be able to pass all checks before they can be merged. Please make a local copy of the rulebook and make sure everything works locally before submitting your PR.
 
-
-## Nextra Docs Template 
-
-This is a template for creating documentation with [Nextra](https://nextra.site).
-
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
-
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
-
 ## Local Development
 
 Clone the repo
