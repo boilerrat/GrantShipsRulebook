@@ -7,11 +7,11 @@ const config: DocsThemeConfig = {
     link: 'https://grantships.fun',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://discord.gg/QNGH4Uxa8A',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
-  primaryHue: 260,
-  primarySaturation: 2,
+  primaryHue: 213,
+  primarySaturation: 56,
   footer: {
     text: 'Grant Ships Rulebook',
   },
