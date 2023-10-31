@@ -1,0 +1,144 @@
+# Grant Ships Whitepaper
+
+`Vol 1.1`
+`Oct 31 2023`
+
+## Abstract
+
+Grant Ships is an evolutionary grants game designed to incentivize and streamline the allocation of community funding within the Arbitrum ecosystem. This document aims to provide a comprehensive understanding of the game mechanics, structural setup, and technical aspects of Grant Ships. 
+
+## Table of Contents
+
+1. [Abstract](#abstract)
+2. [Introduction](#introduction)
+3. [Purpose](#purpose)
+4. [How The Game Works](#how-the-game-works)
+    - [Game Structure & Players](#game-structure--players)
+5. [Game Process](#game-process)
+6. [Vote Modifier Module](#vote-modifier-module)
+7. [Technical Architecture](#technical-architecture)
+8. [Legal & KYC Concerns](#legal--kyc-concerns)
+9. [Funding](#funding)
+10. [Team](#team)
+11. [Roadmap](#roadmap)
+12. [Conclusion](#conclusion)
+
+---
+ 
+## Introduction
+
+The concept of decentralized governance has evolved rapidly, leading to innovative frameworks for community engagement and resource allocation. One such advancement is Grant Ships, a game designed to improve the effectiveness and inclusivity of decentralized governance. This whitepaper outlines the architecture, core features, and unique mechanics that make Grant Ships a pioneering approach to decentralized grant allocation.
+
+## Purpose
+
+The overarching goal of Grant Ships is to create a self-sustaining, community-driven grant allocation system that operates without the need for centralized control. By incorporating gamification elements, the project aims to promote a more inclusive governance model while enhancing awareness of various initiatives within the Arbitrum ecosystem. The long-term vision is to establish a system so efficient that it can run autonomously, guided only by community inputs.
+
+## The History of Blockchain Grants
+
+## Grant Ships Genesis
+
+## How The Game Works
+
+### Tools
+
+The following are the tools used to integrate with the game and the reason we use them. The Grant Ships front end
+
+#### Allo Protocol
+
+[Allo Protocol](https://allo.gitcoin.co/), part of the Gitcoin Grant Stack [^bignote] is a set of smart contracts that provide efficient and transparent capital allocation and distribution.
+
+All ships in the game are registered though Allo which allows them to participate in the distribution of the funding pools created by Grant Ships and allocated to the game by Arbitrum DAO.
+
+Allo includes the voting modules that Grant Ships uses in order for Arbitrum DAO to participate in the funding allocations to ships.
+
+#### Hypercerts
+
+[Hypercerts](https://hypercerts.org/) are semi-fungible ERC1155 tokens desinged to track impact through a unique handling of NFT metadata. They allow impact to be tracked and accumulated which makes it a perfect fit for Grant Ships, which rely's on tracking the impact that a ship is providing. This has a direct bearing on the funding a ship can recieve so it is in a ships best interest to provide impact to the ecosystem.
+
+#### Hats Protocol
+
+[Hats Protocol](https://www.hatsprotocol.xyz/) is a tool that enables onchain revokable roles. This empowers people (or in some cases code) to get the job done. Hats protocol is used throughout Grant Ships in the following ways:
+
+- `Arbitrum DAO` will be the holder of the "Top Hat". This the main Hat of the game of which all others are its subordinate.
+- `Grant Ships` are given a Hat from the DAO. This hat enables the Grant Ship to be funded in subsequent allocation seasons. This hat is revokable by the DAO should the Ship fail to live up to its obligations to the DAO.
+- `Grant Ships Crew` are given hats which allows them to partake in the ship's internal activities.
+- `Referee Team` The referee team is a group of people who watch over the game, to ensure all the players are playing within the rules. If people are suspected of breaking rules, the Referees have been granted the permission, by virtue of the Hat they wear, to issue "yellow" and "red" cards[^bignote2]  
+
+### Players
+
+The game involves multiple actors including Delegated Arbitrum Voters, Referee Team, Game Facilitators, Grant Ships, and Grant Recipients. Each actor plays a unique role.
+
+#### Delegated Arbitrum Voters
+
+- They elect Grant Ships and assess their efficacy through voting.
+- Wear the "Top Hat" and issues Grant Ship Hats.
+- Vote on Allocation percentages to ships based on impact scores or any other available information.
+- Sets expectations for areas of impact
+  
+#### Referee Team
+
+- Oversee the allocation process and ensure compliance with the game's rulebook.
+- Issue Yellow Cards or Red Cards, dependant on severity and/or frequency of infractions, to ships or players that break the rules of the DAO.
+
+#### Grant Ships Crew
+
+- Responsible for designing and implmenting a grants program with a portion of the total allocation to Grant Ships.
+- Processes grant applicants and upholds the value of the Arbitum Ecosystem by awarding Grants of high impact that align with the DAOs focus.
+
+#### Grant Recipients
+
+The Game designers have made consious effort not to impose any design limitations on Grant Ships and as such, very little is said about who are most likely the most imortant part of this design.
+
+We hope that the game provides opportunity for a diverse, impactful group of grant recipients that offer maximum value Arbitrum.
+
+### Game Process
+
+The game is structured into various steps:
+
+1. **Setup**: Involves initial elections and selection of key players.
+2. **Allocation**: Details how grants are allocated by Grant Ships.
+3. **Voting**: Describes the voting mechanism for electing Grant Ships.
+
+<!-- ... expand each step in detail -->
+
+### Vote Modifier Module
+
+This section delves into the game's capability to modulate voting power in line with specific behaviors or events, thus allowing the community to calibrate the importance of various factors.
+
+## Technical Architecture
+
+<!-- Describe the technology stack, smart contracts, token standards, etc. -->
+
+## Legal & KYC Concerns
+
+<!-- Address legal concerns and the implications of KYC within the Arbitrum ecosystem. -->
+
+## Funding
+
+<!-- Provide details about funding stages, milestones, and expected deliverables. -->
+
+## Team
+
+<!-- Detailed profile of the team members, their roles, and expertise. -->
+
+## Roadmap
+
+<!-- Projected timeline and milestones. -->
+
+## Conclusion
+
+<!-- Wrap up the whitepaper and provide avenues for community engagement and further development. -->
+
+## Technical References
+
+### Relevant Protocol Docs
+
+- [Allo Docs]()
+- [Hats Docs](https://docs.hatsprotocol.xyz/)
+- [Hypercerts Docs]()
+
+## Index
+
+[^bignote]: The Gitcoin Grant Stack is a set of tools produced at Gitcoin as a set of tools organizations can use to run their own grant rounds.
+
+[^bignote2]: Cards are issued by referees when ships are not playing by the rules. In future versions of Grant Ships, the DAO may vote to enable the referee the power to toggle a Grant Ships Hats off, immediately suspending the Grants ability to recieve or distribute funding. This is a great power to weild and enabling it is best left through governance and not the designers of the game.
