@@ -29,11 +29,20 @@ Grant Ships is an evolutionary grants game designed to incentivize and streamlin
 
 The concept of decentralized governance has evolved rapidly, leading to innovative frameworks for community engagement and resource allocation. One such advancement is Grant Ships, a game designed to improve the effectiveness and inclusivity of decentralized governance. This whitepaper outlines the architecture, core features, and unique mechanics that make Grant Ships a pioneering approach to decentralized grant allocation.
 
+This paper will take you through the reason Grant Ships was created, the tools that are used to play the game and who plays the game. At time of writing, Grant Ships is still being developed on the implementation side and this document will take you through our development roadmap as well as our implementation plan.
+
 ## Purpose
 
 The overarching goal of Grant Ships is to create a self-sustaining, community-driven grant allocation system that operates without the need for centralized control. By incorporating gamification elements, the project aims to promote a more inclusive governance model while enhancing awareness of various initiatives within the Arbitrum ecosystem. The long-term vision is to establish a system so efficient that it can run autonomously, guided only by community inputs.
 
-## The History of Blockchain Grants
+## web3 Grants
+
+Web3 has consistently recognized the value and importance of grant programs, as evidenced by its enduring tradition of offering these programs to bolster the open web’s legion of enthusiastic contributors: these include open-source developers, researchers, and thought leaders. These grants have been vital in keeping the innovative spirit of open source vibrant, fostering collaboration over competition, and providing pivotal onboarding tools for expanding ecosystems.
+
+Grants programs have always been intrinsic to the web3 community, exemplifying how blockchain protocols actively solicit project proposals that augment their ecosystems. This can range from intricate technical enhancements to community-driven content such as podcasts and newsletters. The primary aim remains constant: to fortify web3, making it more resilient, collaborative, and capable of inspiring other protocols. Notable among these grants programs are the Uniswap Grants Program, which commenced following a policy proposal in 2020 advocating for recurring grants as a growth catalyst; Gitcoin Grants, which introduced the world to Quadratic Voting whith matching pools which have had a huge impact in the growth of the ecosystem, and grant DAOs such as Meta Cartel which consists of web3 enthuiasts who choose to pool some funds and support projects through grants.
+
+Grant Ships' designers have watched and been closely involved in the space over the last few years. We have touched on many of the points that work in the grant landscape and have made improvements in order to find the project that offer the highest impact for the Arbitrum ecosystem and DAO.
+
 
 ## Grant Ships Genesis
 
@@ -77,58 +86,97 @@ The game involves multiple actors including Delegated Arbitrum Voters, Referee T
   
 #### Referee Team
 
-- Oversee the allocation process and ensure compliance with the game's rulebook.
-- Issue Yellow Cards or Red Cards, dependant on severity and/or frequency of infractions, to ships or players that break the rules of the DAO.
+- Review Allocation Disclosures from Grant Ships to ensure they are not malicious
+- Send fund allocations to projects as per request from Grant Ships
+- Minting allocation Hypercerts in the same transaction. This helps voters review the impact before the Allocation Voting Round.
+- Flagging Grant Ships that not operating by the rulebook (Yellow Card, Red Card). The token or Attestation structure is still TBD.
+- Hosting live Minting Events where they approve Allocation Disclosures (Mints HyperCerts and sends funds to projects)
+
+#### Game Facilitators
+
+- Responsible for deploying voting contracts, elections, and airdropping voting tokens
+- Responsible for Marketing and Promotion 
+- Designing and iterating on Vote Modifiers and Game Design
+- In the first iteration, the Referee team and Game facilitators may be in the same role (depending on available funding/community interest) 
 
 #### Grant Ships Crew
 
-- Responsible for designing and implmenting a grants program with a portion of the total allocation to Grant Ships.
-- Processes grant applicants and upholds the value of the Arbitum Ecosystem by awarding Grants of high impact that align with the DAOs focus.
+- Responsible for signaling their Allocation Intents (disclosures)
+- Capturing enough Grant recipient details and including them in the disclosure
+- Ensuring Grant Recipients disclose progress on work completed
 
 #### Grant Recipients
 
-The Game designers have made consious effort not to impose any design limitations on Grant Ships and as such, very little is said about who are most likely the most imortant part of this design.
+The Game designers have made consious effort not to impose any design limitations on Grant Ships and as such, very little is said about who are most likely the most important part of this design.
 
 We hope that the game provides opportunity for a diverse, impactful group of grant recipients that offer maximum value Arbitrum.
 
 ### Game Process
 
+```mermaid
+sequenceDiagram
+    Grant Ship->>Arbitrum DAO: We Want to Give out Grants!
+    Arbitrum DAO-->>Grant Ship: Will provide impact?
+    Grant Ship->>Arbitrum DAO: Yes!
+    Arbitrum DAO-->>Grant Ship: We will vote.
+    Arbitrum DAO-->>Arbitrum DAO: We vote YES!
+    Arbitrum DAO -->> Grant Ship: Here is your Hat, you may begin operations.
+```
+
 The game is structured into various steps:
 
-1. **Setup**: Involves initial elections and selection of key players.
+1. **Setup**: Involves initial elections and selection of key players. Elections will include:
+    - Grant Ships, who will run them and who will be in them.
+    - Referee Team
+    - Game Facilitators
+ 
+During the first beta season many of these roles may be covered by the developers, as the game is fully handed off to the DAO to run and elect their own positions. The beta season will involve the creation of three Ships as we feel this is the minimum viable number of ships in order to maintain a truly competitive environment.
+
+As The DAO becomes familiar with the game they will be asked to prepare by getting their candidates and proposals ready.  
+
 2. **Allocation**: Details how grants are allocated by Grant Ships.
 3. **Voting**: Describes the voting mechanism for electing Grant Ships.
 
-
+```mermaid
+flowchart TD
+    A[Allocation Pool] -->|18.5% of Funding|B(Grant Ship 1)
+    A -->|37% of Funding|C(Grant Ship 2)
+    A -->|44.5%|D(Grant Ship 3)
+    E[Total Impact: 135] -->|Season Report| F[ArbDAO]
+    F -->|Seasonal Allocation| A
+    B -->|Impact Sore 25|E 
+    C -->|Impact Score 50|E 
+    D -->|Impact Score 60|E
+    
+ ```
+*This is a sample only representing a season in which Grant ships were provided a report stating the total impact for each ship being 25, 50 and 60, as a result the DAO decided to allocate funds to each of the ships based on the impact each was able to provide as a total that was funded. *
 
 ### Vote Modifier Module
-
 
 This section delves into the game's capability to modulate voting power in line with specific behaviors or events, thus allowing the community to calibrate the importance of various factors.
 
 ## Technical Architecture
 
-coming soon
+
 
 ## Legal & KYC Concerns
 
-coming soon
+
 
 ## Funding
 
-coming soon
+
 
 ## Team
 
-soming soon
+
 
 ## Roadmap
 
-coming soon
 
 ## Conclusion
 
-coming soon
+
 
 ## Technical References
 
