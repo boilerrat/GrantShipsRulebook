@@ -9,19 +9,8 @@ Grant Ships is an evolutionary grants game designed to incentivize and streamlin
 
 ## Table of Contents
 
-1. [Abstract](#abstract)
-2. [Introduction](#introduction)
-3. [Purpose](#purpose)
-4. [How The Game Works](#how-the-game-works)
-    - [Game Structure & Players](#game-structure--players)
-5. [Game Process](#game-process)
-6. [Vote Modifier Module](#vote-modifier-module)
-7. [Technical Architecture](#technical-architecture)
-8. [Legal & KYC Concerns](#legal--kyc-concerns)
-9. [Funding](#funding)
-10. [Team](#team)
-11. [Roadmap](#roadmap)
-12. [Conclusion](#conclusion)
+> [TOC]
+
 
 ---
  
@@ -46,13 +35,17 @@ Grant Ships' designers have watched and been closely involved in the space over 
 
 ## Grant Ships Genesis
 
+- [ ] TODO
+
 ## How The Game Works
 
-### Tools
+- [ ] TODO
+
+## Tools
 
 The following are the tools used to integrate with the game and the reason we use them. The Grant Ships front end
 
-#### Allo Protocol
+### Allo Protocol
 
 [Allo Protocol](https://allo.gitcoin.co/), part of the Gitcoin Grant Stack [^bignote] is a set of smart contracts that provide efficient and transparent capital allocation and distribution.
 
@@ -60,11 +53,11 @@ All ships in the game are registered though Allo which allows them to participat
 
 Allo includes the voting modules that Grant Ships uses in order for Arbitrum DAO to participate in the funding allocations to ships.
 
-#### Hypercerts
+### Hypercerts
 
 [Hypercerts](https://hypercerts.org/) are semi-fungible ERC1155 tokens desinged to track impact through a unique handling of NFT metadata. They allow impact to be tracked and accumulated which makes it a perfect fit for Grant Ships, which rely's on tracking the impact that a ship is providing. This has a direct bearing on the funding a ship can recieve so it is in a ships best interest to provide impact to the ecosystem.
 
-#### Hats Protocol
+### Hats Protocol
 
 [Hats Protocol](https://www.hatsprotocol.xyz/) is a tool that enables onchain revokable roles. This empowers people (or in some cases code) to get the job done. Hats protocol is used throughout Grant Ships in the following ways:
 
@@ -73,18 +66,22 @@ Allo includes the voting modules that Grant Ships uses in order for Arbitrum DAO
 - `Grant Ships Crew` are given hats which allows them to partake in the ship's internal activities.
 - `Referee Team` The referee team is a group of people who watch over the game, to ensure all the players are playing within the rules. If people are suspected of breaking rules, the Referees have been granted the permission, by virtue of the Hat they wear, to issue "yellow" and "red" cards[^bignote2]  
 
-### Players
+### Push Protocol
+
+- [ ] TODO
+
+## Players
 
 The game involves multiple actors including Delegated Arbitrum Voters, Referee Team, Game Facilitators, Grant Ships, and Grant Recipients. Each actor plays a unique role.
 
-#### Delegated Arbitrum Voters
+### Delegated Arbitrum Voters
 
 - They elect Grant Ships and assess their efficacy through voting.
 - Wear the "Top Hat" and issues Grant Ship Hats.
 - Vote on Allocation percentages to ships based on impact scores or any other available information.
 - Sets expectations for areas of impact
   
-#### Referee Team
+### Referee Team
 
 - Review Allocation Disclosures from Grant Ships to ensure they are not malicious
 - Send fund allocations to projects as per request from Grant Ships
@@ -92,37 +89,35 @@ The game involves multiple actors including Delegated Arbitrum Voters, Referee T
 - Flagging Grant Ships that not operating by the rulebook (Yellow Card, Red Card). The token or Attestation structure is still TBD.
 - Hosting live Minting Events where they approve Allocation Disclosures (Mints HyperCerts and sends funds to projects)
 
-#### Game Facilitators
+### Game Facilitators
 
 - Responsible for deploying voting contracts, elections, and airdropping voting tokens
 - Responsible for Marketing and Promotion 
 - Designing and iterating on Vote Modifiers and Game Design
 - In the first iteration, the Referee team and Game facilitators may be in the same role (depending on available funding/community interest) 
 
-#### Grant Ships Crew
+### Grant Ships Crew
 
 - Responsible for signaling their Allocation Intents (disclosures)
 - Capturing enough Grant recipient details and including them in the disclosure
 - Ensuring Grant Recipients disclose progress on work completed
 
-#### Grant Recipients
+### Grant Recipients
 
 The Game designers have made consious effort not to impose any design limitations on Grant Ships and as such, very little is said about who are most likely the most important part of this design.
 
 We hope that the game provides opportunity for a diverse, impactful group of grant recipients that offer maximum value Arbitrum.
 
-### Game Process
+## Game Process
 
 ```mermaid
-
 sequenceDiagram
     Grant Ship->>Arbitrum DAO: We Want to Give out Grants!
     Arbitrum DAO-->>Grant Ship: Will provide impact?
-    Grant Ship->>Arbitrum DAO: Yes!!
+    Grant Ship->>Arbitrum DAO: Yes!
     Arbitrum DAO-->>Grant Ship: We will vote.
     Arbitrum DAO-->>Arbitrum DAO: We vote YES!
     Arbitrum DAO -->> Grant Ship: Here is your Hat, you may begin operations.
-
 ```
 
 The game is structured into various steps:
@@ -140,7 +135,6 @@ As The DAO becomes familiar with the game they will be asked to prepare by getti
 3. **Voting**: Describes the voting mechanism for electing Grant Ships.
 
 ```mermaid
-
 flowchart TD
     A[Allocation Pool] -->|18.5% of Funding|B(Grant Ship 1)
     A -->|37% of Funding|C(Grant Ship 2)
@@ -152,7 +146,6 @@ flowchart TD
     D -->|Impact Score 60|E
     
  ```
-
 *This is a sample only representing a season in which Grant ships were provided a report stating the total impact for each ship being 25, 50 and 60, as a result the DAO decided to allocate funds to each of the ships based on the impact each was able to provide as a total that was funded. *
 
 ### Vote Modifier Module
@@ -161,34 +154,35 @@ This section delves into the game's capability to modulate voting power in line 
 
 ## Technical Architecture
 
-
+- [ ] TODO
 
 ## Legal & KYC Concerns
 
-
+- [ ] TODO
 
 ## Funding
 
-
+- [ ] TODO
 
 ## Team
 
-
+- [ ] TODO
 
 ## Roadmap
 
+- [ ] TODO
 
 ## Conclusion
 
-
+- [ ] TODO
 
 ## Technical References
 
 ### Relevant Protocol Docs
 
-- [Allo Docs]()
+- [Allo Docs](https://docs.allo.gitcoin.co/)
 - [Hats Docs](https://docs.hatsprotocol.xyz/)
-- [Hypercerts Docs]()
+- [Hypercerts Docs](https://hypercerts.org/docs/intro)
 
 ## Index
 
