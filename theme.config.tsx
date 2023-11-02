@@ -9,7 +9,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://discord.gg/QNGH4Uxa8A',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/boilerrat/GrantShipsRulebook',
   primaryHue: 213,
   primarySaturation: 56,
   footer: {
